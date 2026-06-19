@@ -1,0 +1,5 @@
+Successfully scheduled one-shot timer.
+Expected to fire at: 2026-05-29T00:28:45+02:00
+Prompt: Wait for inspect script to finish
+
+[2026-05-29T00:28:45+02:00] Timer fired.

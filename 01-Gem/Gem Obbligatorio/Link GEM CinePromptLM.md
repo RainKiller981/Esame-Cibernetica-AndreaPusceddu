@@ -1,0 +1,1 @@
+https://gemini.google.com/gem/1aDdvplxtJ3c_PqOYTUL3ojTRSQPEsRdr?usp=sharing

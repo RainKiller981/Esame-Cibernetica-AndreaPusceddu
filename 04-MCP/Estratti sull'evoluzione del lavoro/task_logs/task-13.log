@@ -1,0 +1,5 @@
+Successfully scheduled one-shot timer.
+Expected to fire at: 2026-05-29T00:28:27+02:00
+Prompt: Wait for the test connection script to complete and output its results
+
+[2026-05-29T00:28:27+02:00] Timer fired.

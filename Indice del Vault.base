@@ -1,0 +1,6 @@
+views:
+  - type: list
+    name: Tabella
+    groupBy:
+      property: file.folder
+      direction: ASC

@@ -1,0 +1,60 @@
+Integrare Agente Gemini in CLI
+https://gemini.google.com/share/f53c11b7600e
+Creato con 3.1 Pro 29 maggio 2026 alle ore 00:17
+Data di pubblicazione: 19 giugno 2026 alle ore 19:53
+voglio collegare un agente da te a antigravity cli
+
+Collegare un agente Gemini a una Command Line Interface (CLI) è un'ottima idea per portare l'intelligenza artificiale direttamente nel tuo terminale.
+Poiché le CLI possono essere scritte in vari linguaggi, il metodo universale per collegare un agente "da me" (ovvero basato sui modelli Gemini di Google) a qualsiasi strumento a riga di comando, incluso Antigravity CLI, avviene tramite le API ufficiali.
+Ecco i passaggi fondamentali per effettuare l'integrazione, usando Python (il linguaggio più comune per le CLI, specialmente considerando il famoso easter egg import antigravity) come esempio di riferimento.
+
+1. Ottenere la Chiave API
+Per far comunicare la CLI con l'agente, avrai bisogno di un token di accesso:
+
+Vai su Google AI Studio.
+Crea un nuovo progetto (se non ne hai uno) e genera una API Key.
+Salva questa chiave come variabile d'ambiente sul tuo sistema per non esporla nel codice sorgente:
+export GEMINI_API_KEY="la-tua-chiave-api-qui"
+
+3. Installare l'SDK
+Se la tua Antigravity CLI è basata su Python, dovrai installare la libreria ufficiale di Google. Esegui nel terminale:
+
+pip install -U google-generativeai
+(Se la CLI è in Node.js o Go, esistono gli SDK ufficiali corrispondenti come @google/generative-ai).
+
+3. Integrare l'Agente nel Codice della CLI
+Dovrai importare il modulo Gemini all'interno dei file sorgente della tua CLI e configurare l'agente affinché elabori gli input passati da riga di comando.
+Ecco uno schema di base di come apparirebbe il collegamento:
+
+Python
+
+import osimport argparseimport google.generativeai as genai# 1. Configura in modo sicuro l'API usando la variabile d'ambiente
+api_key = os.environ.get("GEMINI_API_KEY")if not api_key:
+    raise ValueError("Variabile GEMINI_API_KEY non trovata.")
+genai.configure(api_key=api_key)# 2. Inizializza l'agente (modello)# Usa 'gemini-1.5-flash' per risposte rapide o 'gemini-1.5-pro' per task complessi
+model = genai.GenerativeModel('gemini-1.5-flash')def gestisci_richiesta_cli(prompt_utente):
+    """Invia il comando all'agente Gemini e restituisce la risposta."""
+    try:
+        response = model.generate_content(prompt_utente)
+        return response.text
+    except Exception as e:
+        return f"Errore di connessione all'agente: {e}"def main():
+    # Setup di base per ricevere argomenti dalla CLI (adattalo ad Antigravity CLI)
+    parser = argparse.ArgumentParser(description="Antigravity CLI con Agente AI")
+    parser.add_argument("comando", type=str, help="Il prompt da inviare all'agente")
+    args = parser.parse_args()
+
+    print("Analisi in corso...\n")
+    risposta = gestisci_richiesta_cli(args.comando)
+    
+    print("🤖 Agente:")
+    print(risposta)if __name__ == "__main__":
+    main()
+
+4. Gestione del Contesto (Opzionale)
+Se vuoi che l'agente mantenga la memoria della conversazione durante l'esecuzione della CLI (modalità chat), puoi inizializzare un oggetto chat invece di una singola generazione di contenuti:
+Python
+
+chat = model.start_chat(history=[])
+response = chat.send_message("Il tuo comando da CLI")
+Per darti le istruzioni esatte per il tuo ambiente: "Antigravity CLI" è uno strumento personalizzato che stai scrivendo tu da zero in Python, o ti stai riferendo a un framework/pacchetto specifico (es. Node.js, Go) che porta questo nome?

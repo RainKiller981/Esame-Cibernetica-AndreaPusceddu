@@ -1,0 +1,37 @@
+Avviare e Usare Antigravity CLI
+https://gemini.google.com/share/830392c164dc
+Creato con 3.1 Pro 29 maggio 2026 alle ore 00:15
+Data di pubblicazione: 19 giugno 2026 alle ore 19:52
+come faccio a far partire antigravity cli
+
+Per far partire e iniziare a usare Antigravity CLI, il comando principale da lanciare nel tuo terminale è semplicemente agy.
+Ecco i passaggi completi per l'avvio e la configurazione iniziale:
+
+1. Assicurati di averlo installato
+Se non hai ancora installato la CLI sul tuo sistema, apri il terminale ed esegui il comando corrispondente al tuo sistema operativo:
+macOS e Linux:
+
+Bash
+
+curl -fsSL https://antigravity.google/cli/install.sh | bash
+Windows (PowerShell):
+
+PowerShell
+
+irm https://antigravity.google/cli/install.ps1 | iex
+2. Avvia il programma
+Una volta completata l'installazione, digita semplicemente questo comando nel terminale e premi Invio:
+Bash
+
+agy
+3. Effettua l'Autenticazione (Primo Avvio)
+La prima volta che esegui il comando, Antigravity CLI ti chiederà di autenticarti con il tuo account Google o con un progetto Google Cloud (GCP).
+Se sei sul tuo computer locale: Il terminale aprirà automaticamente una finestra del tuo browser predefinito per permetterti di fare il login in modo sicuro.
+Se sei connesso in remoto (es. tramite SSH): Il sistema rileverà che sei in una sessione remota e stamperà un URL a schermo. Copia quel link, incollalo nel browser del tuo computer locale, fai il login e copia la chiave segreta generata per incollarla nel terminale.
+4. Inizia a usare gli agenti
+Subito dopo l'autenticazione, la CLI sarà attiva e connessa (di default al modello Gemini Flash o Pro, a seconda del tuo piano). Puoi digitare direttamente le tue richieste o utilizzare i comandi integrati per gestire il flusso di lavoro.
+Ecco i comandi più utili per iniziare:
+
+/goal [il tuo obiettivo] – Avvia l'orchestrazione di sub-agenti in background per compiti complessi o progetti multi-file.
+/config – Apre il menu delle impostazioni dove puoi gestire i permessi (ad esempio decidere se la CLI deve chiederti conferma ogni volta che vuole modificare un file o eseguire uno script).
+/logout – Per scollegare il tuo account e pulire le credenziali salvate.

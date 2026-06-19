@@ -1,0 +1,4 @@
+2026-05-29 00:19:02,488 - BlenderMCPServer - INFO - BlenderMCP server starting up
+2026-05-29 00:19:02,494 - BlenderMCPServer - INFO - Connected to Blender at localhost:9876
+2026-05-29 00:19:02,494 - BlenderMCPServer - INFO - Created new persistent connection to Blender
+2026-05-29 00:19:02,494 - BlenderMCPServer - INFO - Successfully connected to Blender on startup

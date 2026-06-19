@@ -1,0 +1,236 @@
+{
+  "main": {
+    "id": "5324373015726ba8",
+    "type": "split",
+    "children": [
+      {
+        "id": "4509724f8bf84da7",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "e7a7b303c61786dc",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "README.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "README"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "ca965c613cab26fd",
+    "type": "split",
+    "children": [
+      {
+        "id": "29179b47e8cbb16f",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "f51159e91ce756d6",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Esplora risorse"
+            }
+          },
+          {
+            "id": "d9fba040f50a4b97",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Ricerca"
+            }
+          },
+          {
+            "id": "05a96c3951b0a007",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Segnalibri"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "0038fb4fe963a24a",
+    "type": "split",
+    "children": [
+      {
+        "id": "a036badda71fd01d",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "ebc599f900db8979",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "README.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Riferimenti a README"
+            }
+          },
+          {
+            "id": "c14f16f3e778ddf4",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Benvenuto.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Collegamenti in uscita da Benvenuto"
+            }
+          },
+          {
+            "id": "ef9a9b7e784e26cb",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Etichette"
+            }
+          },
+          {
+            "id": "d4368f2cc00fc745",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "Tutte le proprietà"
+            }
+          },
+          {
+            "id": "8969dc19b73a9502",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "README.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Struttura di README"
+            }
+          }
+        ],
+        "currentTab": 3
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Apri selezione rapida": false,
+      "graph:Apri vista grafo": false,
+      "canvas:Crea nuova lavagna": false,
+      "daily-notes:Apri nota del giorno": false,
+      "templates:Inserisci modello": false,
+      "command-palette:Apri riquadro comandi": false,
+      "bases:Crea nuova Base": false,
+      "homepage:Open homepage": false
+    }
+  },
+  "active": "e7a7b303c61786dc",
+  "lastOpenFiles": [
+    "README.md",
+    "04-MCP/Agenti/Link GEM Generazione Blender-Python.md",
+    "Indice del Vault.base",
+    "01-Gem/Gem Obbligatorio/Link GEM CinePromptLM.md",
+    "02-NotebookLM/NotebookLM Obbligatorio/Link per il NotebookLM Obbligatorio.md",
+    "02-NotebookLM/NotebookLM Libero/Link NotebookLM Libero.md",
+    "04-MCP/000_Info.md",
+    "04-MCP/Conversazioni con Gemini/Integrare_Agente_Gemini_in_CLI.txt",
+    "04-MCP/Conversazioni con Gemini/Prompt_Generare_Xenomorfo.txt",
+    "04-MCP/Idee e Risultati/nostromo_interior_set.png",
+    "04-MCP/Idee e Risultati/nostromo_shot_3_close_up.png",
+    "04-MCP/Idee e Risultati/nostromo_shot_2_overhead.png",
+    "04-MCP/Idee e Risultati/geonodes_test.png",
+    "04-MCP/Idee e Risultati/generate_geonodes.py",
+    "04-MCP/Idee e Risultati/tempio_greco_render.png",
+    "04-MCP/Idee e Risultati/tempio_greco.png",
+    "04-MCP/Idee e Risultati/result.json",
+    "04-MCP/Idee e Risultati/xenomorph_and_egg.png",
+    "04-MCP/Idee e Risultati/wardrobe_screenshot.png",
+    "04-MCP/Idee e Risultati/xenomorph_and_egg.png0004.png",
+    "04-MCP/Idee e Risultati/xenomorph_and_egg.png0009.png",
+    "04-MCP/Agenti/Agents CLI/blender_creator_agent.json",
+    "04-MCP/Agenti/Agents CLI/blender_script_writer_agent.json",
+    "04-MCP/Conversazioni con Antigravity IDE/Conversazione_2_Antigravity_IDE.txt",
+    "04-MCP/Conversazioni con Antigravity IDE",
+    "04-MCP/Conversazioni con Antigravity IDE/Conversazione 1 Antigravity IDE.txt",
+    "04-MCP/File.md/antigravity.md",
+    "04-MCP/File.md",
+    "Senza nome.md",
+    "04-MCP/File.md/gemini.md",
+    "01-Gem/Gem Libero/Link GEM Libero.md",
+    "03-Bibliografia/Fonti NotebookLM Libero - Gem/Sito Web di Riferimento.md",
+    "04-MCP/Estratti sull'evoluzione del lavoro/reports_and_products/xenomorph_design_report.md",
+    "04-MCP/Estratti sull'evoluzione del lavoro/reports_and_products/xenomorph_creation.md",
+    "04-MCP/Estratti sull'evoluzione del lavoro/reports_and_products/wardrobe_design.md",
+    "04-MCP/Estratti sull'evoluzione del lavoro/reports_and_products/tree_report.md",
+    "04-MCP/Estratti sull'evoluzione del lavoro/reports_and_products/greek_temple_report.md",
+    "04-MCP/Estratti sull'evoluzione del lavoro/reports_and_products/geometry_nodes_instancer_report.md",
+    "04-MCP/Estratti sull'evoluzione del lavoro/history/blender_generation_history.md",
+    "04-MCP/Estratti sull'evoluzione del lavoro/skills/google-antigravity-sdk_SKILL.md",
+    "04-MCP/Estratti sull'evoluzione del lavoro/skills/blender-3d_SKILL.md",
+    "04-MCP/skills/blender-3d_SKILL.md",
+    "04-MCP/skills/google-antigravity-sdk_SKILL.md",
+    "04-MCP/reports_and_products/xenomorph_design_report.md",
+    "04-MCP/reports_and_products/xenomorph_creation.md",
+    "Senza nome.canvas"
+  ]
+}

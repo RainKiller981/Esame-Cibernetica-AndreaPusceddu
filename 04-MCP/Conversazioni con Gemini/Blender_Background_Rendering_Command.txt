@@ -1,0 +1,19 @@
+Blender Background Rendering Command
+https://gemini.google.com/share/f801d5fc46c2
+Le risposte riportate di seguito sono state generate con il Gem del creator in base alle istruzioni personalizzate. Scopri di più
+Si apre in una nuova finestra
+29 maggio 2026 alle ore 01:03
+Data di pubblicazione: 19 giugno 2026 alle ore 19:56
+
+Antigravity Blender
+Gem personalizzato
+Bash
+
+blender -b
+Creami uno xenomorfo come su Alien con un prompt che posso inserire su Antigravity CLI
+
+Antigravity Blender
+Gem personalizzato
+Bash
+
+antigravity-cli generate --prompt "Biomechanical xenomorph alien, H.R. Giger style, highly detailed 

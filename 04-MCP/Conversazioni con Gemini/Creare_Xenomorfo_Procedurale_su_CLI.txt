@@ -1,0 +1,68 @@
+Creare Xenomorfo Procedurale su CLI
+https://gemini.google.com/share/142d032f4e46
+Le risposte riportate di seguito sono state generate con il Gem del creator in base alle istruzioni personalizzate. Scopri di più
+Si apre in una nuova finestra
+29 maggio 2026 alle ore 00:58
+Data di pubblicazione: 19 giugno 2026 alle ore 19:55
+Mi dai un prompt per creare uno xenomorfo su CLI?
+
+Antigravity Blender
+Gem personalizzato
+Iniziamo a scrivere lo script per generare lo xenomorfo da CLI. Ti guiderò passo dopo passo con alcune domande per espandere il codice insieme e arrivare al risultato finale, rispettando rigorosamente le tue regole di architettura. Di seguito trovi il blocco iniziale che prepara la scena, gestisce le versioni del motore di rendering e crea la geometria del tratto più iconico della creatura (il cranio allungato) tramite oggetti parametrici.
+Python
+
+import bpyimport mathdef clean_scene() -> None:
+    """Pulisce la scena iniziale in modalità headless."""
+    try:
+        if bpy.context.active_object:
+            bpy.ops.object.mode_set(mode='OBJECT')
+        bpy.ops.object.select_all(action='SELECT')
+        bpy.ops.object.delete(use_global=False)
+    except Exception:
+        pass # Previene crash se eseguito senza un context UI valido
+        
+    for block in bpy.data.meshes: bpy.data.meshes.remove(block)
+    for block in bpy.data.metaballs: bpy.data.metaballs.remove(block)
+    for block in bpy.data.materials: bpy.data.materials.remove(block)def setup_engine() -> None:
+    """Configura il motore con validazione dinamica per Eevee Next (Blender 4.2+) o Eevee (3.x)."""
+    try:
+        bpy.context.scene.render.engine = 'BLENDER_EEVEE_NEXT'
+        bpy.context.scene.eevee.use_raytracing = True
+    except AttributeError:
+        bpy.context.scene.render.engine = 'BLENDER_EEVEE'
+        bpy.context.scene.eevee.use_ssr = Truedef create_collections() -> tuple[bpy.types.Collection, bpy.types.Collection]:
+    """Isola i dati in Collection specifiche."""
+    col_hidden = bpy.data.collections.new("Collection_Hidden")
+    col_render = bpy.data.collections.new("Collection_Render")
+    bpy.context.scene.collection.children.link(col_hidden)
+    bpy.context.scene.collection.children.link(col_render)
+    return col_hidden, col_renderdef spawn_xenomorph_base(collection: bpy.types.Collection) -> bpy.types.Object:
+    """Scolpisce il volume base tramite interpolazione di coordinate vettoriali."""
+    mball_data = bpy.data.metaballs.new("XenoBase_Data")
+    mball_obj = bpy.data.objects.new("XenoBase", mball_data)
+    collection.objects.link(mball_obj)
+
+    # Coordinate dei vettori spaziali (X, Y, Z) e raggio per plasmare cranio e collo
+    coords = [
+        ((0.0, 0.0, 0.0), 1.0),    # Mascella/Fronte
+        ((0.0, -1.5, 0.5), 0.8),   # Centro del cranio allungato
+        ((0.0, -3.0, 0.2), 0.5),   # Estremità posteriore
+        ((0.0, 0.5, -1.5), 0.6)    # Inizio colonna vertebrale
+    ]
+    
+    for pos, radius in coords:
+        el = mball_data.elements.new()
+        el.co = pos
+        el.radius = radius
+
+    return mball_objdef main() -> None:
+    clean_scene()
+    setup_engine()
+    col_hidden, col_render = create_collections()
+    xeno_base = spawn_xenomorph_base(col_render)if __name__ == "__main__":
+    main()
+Spiegazione Tecnica
+Validazione Dinamica (Try/Except): La funzione setup_engine() usa il blocco try per tentare l'attivazione del raytracing tramite le API di Eevee Next (Blender 4.x). Se l'attributo manca nelle versioni 3.x, il blocco except AttributeError esegue il fallback allo Screen Space Reflection standard. Lo stesso approccio è usato in clean_scene() per evitare blocchi causati dall'assenza del Context UI in esecuzione CLI.
+Isolamento e Type Hinting: L'impiego di -> tuple[bpy.types.Collection, bpy.types.Collection] e la creazione manuale delle collection isolano i dati dalla master scene. Questo prepara un ambiente ottimizzato per quando istanzieremo i Geometry Nodes su Collection_Hidden.
+Costruzione Vettoriale (Metaball): Generare una complessa mesh organica per vertici da zero richiederebbe migliaia di righe di codice. La funzione spawn_xenomorph_base sfrutta la fusione volumetrica intrinseca delle Metaball. La lista coords definisce le traslazioni spaziali: estendendo i vettori lungo l'asse Y negativo e sollevandoli gradualmente su Z, calcoliamo matematicamente l'inclinazione aerodinamica del cranio.
+Per trasformare questo volume base in un esoscheletro biomeccanico realistico, dobbiamo assegnargli un materiale procedurale scuro e viscido direttamente via codice. Quali nodi (ad esempio ShaderNodeBsdfPrincipled e ShaderNodeTexNoise) utilizzeresti per scrivere la funzione create_biomech_shader() -> bpy.types.Material e manipolare i valori di rugosità della superficie tramite la loro interfaccia API?
