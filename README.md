@@ -9,4 +9,4 @@ Questo repository contiene l'intero workflow sviluppato per l'esame di Ciberneti
 - Studente: Andrea Pusceddu
 - Mail: andrea.pusceddu@studenti.accademiasironi.it
 - Matricola: 3725
-- Link GitHub: https://github.com/RainKiller981/Esame-Cibernetica-Andrea-Pusceddu
+- Link GitHub: [https://github.com/RainKiller981/Esame-Cibernetica-Andrea-Pusceddu](https://github.com/RainKiller981/Esame-Cibernetica-AndreaPusceddu)
